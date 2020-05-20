@@ -16,9 +16,9 @@ class App extends React.Component {
     this.setState({searchField: e.target.value})
   }
   componentDidMount(){
-    fetch('https://jsonplaceholder.typicode.com/users')
-      .then(response => response.json())
-      .then(users => this.setState({monsters: users}))
+    fetch("https://jsonplaceholder.typicode.com/users")
+      .then((response) => response.json())
+      .then((users) => this.setState({ monsters: users }));
   }
   render(){
     const { monsters, searchField} = this.state
