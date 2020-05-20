@@ -1,17 +1,17 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 
 class App extends React.Component {
   constructor(){
     super()
     this.state = {
-      monsters: [
-        {name: "a", id: "1"},
-        {name: "b", id: "2"},
-        {name: "c", id: "3"},
-      ]
+      monsters: []
     }
+  }
+  componentDidMount(){
+    fetch('https://jsonplaceholder.typicode.com/users')
+      .then(response => response.json())
+      .then(users => this.setState({monsters: users}))
   }
   render(){
     return (
