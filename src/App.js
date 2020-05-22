@@ -26,7 +26,7 @@ class App extends React.Component {
       monster.name.toLowerCase().includes(searchField.toLowerCase()))
     return (
       <div className="App">
-        <h1>Monsters</h1>
+        <h1>B-Monster</h1>
         <SearchBox placeholder='Search monster' handleChange={this.handleChange}/>
         <CardList monsters={filterMonsters} />
       </div>
